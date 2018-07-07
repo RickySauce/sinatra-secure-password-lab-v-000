@@ -19,6 +19,7 @@ class ApplicationController < Sinatra::Base
 
   post "/signup" do
     if !params[:username].nil? || !params[:username] == ""
+      binding.pry
       redirect '/login'
     else
       redirect 'failure'
